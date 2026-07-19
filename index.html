@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wordhoard — Support</title>
+  <title>Wordhoard — A quiet, offline vocabulary companion</title>
+  <meta name="description" content="One considered word a day, with widgets, flashcards, and custom study lists. No accounts, no ads, no internet required.">
   <style>
     :root {
       --paper: #F7F1E4;
@@ -19,74 +20,163 @@
       color: var(--ink);
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.65;
-      padding: 48px 24px;
     }
-    main {
-      max-width: 640px;
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    header { text-align: center; padding: 72px 24px 40px; }
+    header h1 { font-size: 3rem; line-height: 1.1; }
+    header .tagline {
+      font-style: italic;
+      color: var(--ink-secondary);
+      font-size: 1.25rem;
+      margin-top: 8px;
+    }
+    .rule {
+      width: 40px; height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      margin: 24px auto;
+    }
+    header .pitch { max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+    .badge {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: var(--card);
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 1rem;
+    }
+    .badge:hover { opacity: 0.92; }
+    .badge-note { font-size: 0.85rem; color: var(--ink-secondary); margin-top: 10px; font-style: italic; }
+
+    /* Screenshots */
+    .shots {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 24px 24px 8px;
+    }
+    .shot { text-align: center; }
+    .shot img {
+      width: 240px;
+      max-width: 78vw;
+      height: auto;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(42, 33, 24, 0.18);
+      display: block;
       margin: 0 auto;
+    }
+    .shot figcaption {
+      font-style: italic;
+      color: var(--ink-secondary);
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 48px 0;
+    }
+    .feature {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 48px 40px;
+      padding: 24px;
     }
-    h1 {
-      font-size: 2.2rem;
-      line-height: 1.2;
-      margin-bottom: 4px;
+    .feature h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 6px; }
+    .feature p { font-size: 0.95rem; }
+
+    /* Support / FAQ */
+    section.panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin-bottom: 24px;
     }
-    .tagline {
-      font-style: italic;
-      color: var(--ink-secondary);
-      margin-bottom: 8px;
-    }
-    .rule {
-      width: 40px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-      margin: 16px 0 24px;
-    }
-    h2 {
-      font-size: 1.2rem;
-      color: var(--accent);
-      margin: 28px 0 8px;
-    }
-    p { margin-bottom: 12px; }
-    ul { margin: 0 0 12px 24px; }
-    li { margin-bottom: 4px; }
+    section.panel h2 { color: var(--accent); font-size: 1.3rem; margin-bottom: 10px; }
+    section.panel p { margin-bottom: 10px; }
+    section.panel ul { margin: 0 0 8px 22px; }
+    section.panel li { margin-bottom: 8px; }
     a { color: var(--accent); }
+
     footer {
-      max-width: 640px;
-      margin: 24px auto 0;
       text-align: center;
       font-style: italic;
       color: var(--ink-secondary);
       font-size: 0.9rem;
+      padding: 24px 0 48px;
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
     <h1>Wordhoard</h1>
     <p class="tagline">A quiet, offline vocabulary companion.</p>
     <div class="rule"></div>
+    <p class="pitch">One considered word a day — with pronunciation, part of speech, definition, and an example sentence. Keep it in view with Home and Lock Screen widgets, and make it stick with flashcards and custom study lists.</p>
+    <a class="badge" href="#" aria-disabled="true">Coming soon to the App&nbsp;Store</a>
+    <p class="badge-note">No accounts · No ads · No internet required</p>
+  </header>
 
-    <p>Wordhoard brings you a considered word every day — with pronunciation, part of speech, definition, and an example sentence — plus Home and Lock Screen widgets, a browsable dictionary, favorites, and custom study lists with flashcard review. No accounts, no ads, no internet required.</p>
+  <div class="wrap">
+    <div class="shots">
+      <figure class="shot">
+        <img src="images/home.png" alt="Wordhoard's Word of the Day screen showing the word Reverent with pronunciation, definition, and example sentence" loading="lazy">
+        <figcaption>A new word every day</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/widget.jpg" alt="Wordhoard's Home Screen widget showing the word Exemplary with its definition and example" loading="lazy">
+        <figcaption>Widgets keep it in view</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/flashcards.png" alt="Wordhoard's flashcard review mode showing the word Antinomy before the definition is revealed" loading="lazy">
+        <figcaption>Flashcard review mode</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/browse.png" alt="Wordhoard's browse screen with search and difficulty filters over the full dictionary" loading="lazy">
+        <figcaption>Browse the full dictionary</figcaption>
+      </figure>
+    </div>
 
-    <h2>Support</h2>
-    <p>Questions, bug reports, or suggestions are always welcome. Email <a href="mailto:wordhoard.help@gmail.com">wordhoard.help@gmail.com</a> and we'll get back to you as soon as we can.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Your pace, your level</h3>
+        <p>Choose 1&ndash;4 words a day and a difficulty from Beginner to Expert, so the words you meet actually match where you are.</p>
+      </div>
+      <div class="feature">
+        <h3>Track what you know</h3>
+        <p>Favorite the words you love and mark words &ldquo;known&rdquo; to retire them from your rotation — the app only shows you words you haven't mastered.</p>
+      </div>
+      <div class="feature">
+        <h3>Build study lists</h3>
+        <p>Group words into custom lists and review them with a focused, distraction-free flashcard mode. Perfect for exam prep.</p>
+      </div>
+      <div class="feature">
+        <h3>Private by design</h3>
+        <p>No account, no sign-up, no analytics. Wordhoard works entirely offline and never asks for your data. <a href="privacy.html">Read the privacy policy</a>.</p>
+      </div>
+    </div>
 
-    <h2>Frequently asked</h2>
-    <ul>
-      <li><strong>How do I change how many words I get each day?</strong> Open Settings (the gear icon on the Today screen) and choose 1&ndash;4 words per day.</li>
-      <li><strong>Can I pick a difficulty level?</strong> Yes — Settings lets you choose Beginner, Intermediate, Advanced, or Expert, or leave it on All.</li>
-      <li><strong>How do I add the widget?</strong> Long-press your Home Screen, tap the +, and search for Wordhoard. Lock Screen widgets are added from the Lock Screen customizer.</li>
-      <li><strong>Where is my data stored?</strong> Entirely on your device. See our <a href="privacy.html">privacy policy</a>.</li>
-    </ul>
+    <section class="panel" id="support">
+      <h2>Support</h2>
+      <p>Questions, bug reports, or suggestions are always welcome. Email <a href="mailto:wordhoard.help@gmail.com">wordhoard.help@gmail.com</a> and we'll get back to you as soon as we can.</p>
+      <ul>
+        <li><strong>How do I change how many words I get each day?</strong> Open Settings (the gear icon on the Today screen) and choose 1&ndash;4 words per day.</li>
+        <li><strong>How do I add the widget?</strong> Long-press your Home Screen, tap the +, and search for Wordhoard. Lock Screen widgets are added from the Lock Screen customizer.</li>
+        <li><strong>Where is my data stored?</strong> Entirely on your device — see the <a href="privacy.html">privacy policy</a>.</li>
+      </ul>
+    </section>
+  </div>
 
-    <h2>Privacy</h2>
-    <p>Wordhoard collects no data at all. Read the full <a href="privacy.html">privacy policy</a>.</p>
-  </main>
-  <footer>© 2026 Wordhoard</footer>
+  <footer>© 2026 Wordhoard · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:wordhoard.help@gmail.com">Contact</a></footer>
 </body>
 </html>
